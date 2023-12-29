@@ -1,0 +1,595 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow: hidden;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  border-bottom: 2px solid #d1ccd7;
+}
+header h1 {
+  font-family: "Pacifico", sans-serif;
+  letter-spacing: 3.5px;
+  font-size: 30px;
+  color: #5d2057;
+  margin-top: -10px;
+  /* margin-right: 10px; */
+  padding: 0 10px;
+  cursor: pointer;
+  transition: all 1s;
+  border-radius: 8px;
+  border-bottom: 1px solid white;
+}
+header .text-input {
+  display: inline-flex;
+  padding: 0 15px;
+  height: 33px;
+  align-content: center;
+  border: 1px solid #d8d6dc;
+  margin-top: 5px;
+  margin-right: 40px;
+  margin-left: 10px;
+  border-radius: 25px;
+}
+header .text-input input {
+  border-radius: 25px;
+  padding: 7px 15px;
+  outline: none;
+  border: 0;
+  font-size: 14px;
+  padding-left: 0;
+  font-family: "Montserrat", sans-serif;
+  width: 16vw;
+}
+header .text-input svg {
+  width: 20px;
+  stroke: #77737d;
+  stroke-width: 3px;
+}
+
+header .opt-svg {
+  width: 22px;
+  stroke: inherit;
+}
+
+header .left {
+  display: flex;
+}
+
+header .options {
+  display: flex;
+}
+header .options div {
+  display: flex;
+  align-items: center;
+  margin-right: 35px;
+  cursor: pointer;
+  color: #77737d;
+  transition: all 1s;
+  stroke: #77737d;
+}
+header .options div svg {
+  width: 18px;
+}
+
+header .options div:hover {
+  color: #8458b6;
+  stroke: #8458b6;
+}
+
+header .options div p {
+  font-size: 14px;
+  font-weight: 600;
+  color: inherit;
+  margin-left: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+header .options div {
+  display: flex;
+}
+header .right {
+  display: flex;
+}
+header .right .create {
+  display: flex;
+  background-color: #e9e9eb;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-family: "Montserrat", sans-serif;
+  align-items: center;
+  cursor: pointer;
+}
+header .right .create svg {
+  stroke: black;
+  width: 10px;
+}
+header .right .create p {
+  font-weight: 600;
+  font-size: 15px;
+  margin-left: 5px;
+}
+header .right svg:last-child {
+  background-color: #d8d6dc;
+  border-radius: 50%;
+  margin-left: 25px;
+  cursor: pointer;
+}
+
+.container {
+  background-color: #f9f9f9;
+  height: calc(100vh - 55px);
+  overflow-y: auto;
+}
+.container::-webkit-scrollbar {
+  width: 10px;
+}
+.container::-webkit-scrollbar-thumb:hover {
+  background: #ce8e18;
+  cursor: pointer;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background: #f0a929;
+  border: 0;
+  border-radius: 8px;
+}
+.container .content {
+  display: flex;
+  padding: 2% 6%;
+  flex-direction: column;
+}
+.container .content .row-1 {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  column-gap: 20px;
+}
+.container .content .row-1 div {
+  background-color: white;
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container .content .row-1 div:first-child nav {
+  /* display: inline-block; */
+  background-color: #f4f4f4;
+  padding: 5px;
+  border: 2px solid #a4a4a4;
+  border-radius: 12px;
+  width: calc(40% + 110px);
+  margin-left: 27%;
+  margin-top: 7%;
+  /* color: #d1ccd7; */
+}
+.container .content .row-1 div:first-child nav input {
+  border-radius: 8px;
+  padding: 20px 15px;
+  outline: none;
+  border: 0;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  /* width: 75%; */
+  width: calc(100% - 90px);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+}
+.container .content .row-1 div:first-child nav button {
+  border-radius: 8px;
+  padding: 20px 15px;
+  padding-bottom: 15px;
+  outline: none;
+  border: 0;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-bottom: 5px solid #50366e;
+  cursor: pointer;
+  margin-left: 10px;
+  width: 80px;
+  background-color: #8458b6;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.5s;
+}
+.container .content .row-1 div:first-child nav button:hover {
+  background-color: #9164c5;
+}
+
+.container .content .row-1 div:last-child nav {
+  display: grid;
+  justify-content: center;
+  margin-top: 25px;
+}
+.container .content .row-1 div:last-child nav h1 {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 10px;
+  font-weight: 500;
+  justify-self: center;
+}
+.container .content .row-1 div:last-child nav ol {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 5px;
+  color: #f0a929;
+  display: flex;
+  column-gap: 10px;
+  font-size: 12px;
+}
+.container .content .row-1 div:last-child nav ol p {
+  cursor: pointer;
+}
+.container .content .row-2 {
+  margin-top: 40px;
+}
+.container .content .row-2 .heading h1 {
+  font-weight: 500;
+  font-size: 25px;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: space-between;
+}
+.container .content .row-2 .heading h1 span {
+  font-weight: 800;
+  border-radius: 4px;
+  font-size: 15px;
+  background-color: #eee9f4;
+  color: #8854c2;
+  padding: 5px 15px;
+  margin-right: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.container .content .row-2 .data {
+  display: grid;
+  margin-top: 15px;
+  column-gap: 30px;
+  grid-template-columns: repeat(6, 1fr);
+}
+.container .content .row-2 .data .quiz {
+  width: 100%;
+  padding-left: 5px;
+  border-radius: 8px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+  position: relative;
+  transition: box-shadow 0.3s;
+  cursor: pointer;
+}
+.container .content .row-2 .data .quiz:hover {
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+}
+.container .content .row-2 .data .quiz nav {
+  height: 50%;
+  overflow: hidden;
+  position: relative;
+}
+.container .content .row-2 .data .quiz nav img {
+  width: 95%;
+}
+.container .content .row-2 .data .quiz nav p {
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  padding: 5px;
+  background-color: #e9e9eb;
+  border-radius: 4px;
+}
+
+.container .content .row-2 .data .quiz h1 {
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+.container .content .row-2 .data .quiz h2 {
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+.container .content .row-2 .data .quiz h2:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.container .content .row-2 .data .quiz a {
+  font-weight: 300;
+  font-family: "Montserrat", sans-serif;
+  bottom: 10px;
+  width: 90%;
+  border-radius: 12px;
+  padding: 2px 10px;
+  margin-left: 20px;
+  cursor: default;
+}
+.container .content .row-2 .data .quiz a p {
+  font-size: 12px;
+  color: black;
+  width: 180px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  margin-left: 20px;
+}
+
+footer {
+  background-color: white;
+}
+footer div:first-child {
+  display: grid;
+  padding: 2% 5%;
+  padding-right: 0;
+  grid-template-columns: repeat(4, auto);
+}
+footer div:first-child h1 {
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+  font-size: 18px;
+  margin-bottom: 25px;
+  letter-spacing: 0.2px;
+}
+footer div:first-child li {
+  font-family: "Montserrat", sans-serif;
+  list-style-type: none;
+  color: #6d6d85;
+  font-size: 14px;
+  margin-bottom: 20px;
+  letter-spacing: 0.2px;
+}
+footer div:first-child li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+footer div:first-child .footer-img {
+  grid-column: 1 / 5;
+  width: 120px;
+}
+footer div:first-child div {
+  grid-column: 1 / 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 50px;
+}
+footer div:first-child div .left {
+  padding-left: 0;
+  margin-top: 10px;
+}
+footer div:first-child div .left img {
+  width: 20px;
+  transition: transform 0.5s;
+  margin-right: 10px;
+  cursor: pointer;
+}
+footer div:first-child div .left img:hover {
+  transform: scale(1.2);
+}
+footer div:first-child div .left p {
+  color: #6d6d85;
+  cursor: default;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.3px;
+  font-size: 13px;
+  margin-right: 20px;
+}
+footer div:first-child div .left p:last-child {
+  margin-left: 20px;
+}
+footer div:first-child div .right {
+  display: flex;
+  align-items: center;
+}
+footer div:first-child div .right p {
+  margin-right: 10px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  cursor: default;
+}
+footer div:first-child div .right img {
+  width: 110px;
+  height: 40px;
+  margin-left: 10px;
+}
+
+.dark {
+  display: none;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@keyframes fade_in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.show-data {
+  width: 30vw;
+  height: 80vh;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 50%;
+  margin-top: 5%;
+  transform: translate(-50%);
+  border-radius: 24px;
+  display: none;
+  animation: fade_in 0.5s linear;
+}
+
+.show-data .quiz {
+  width: 100%;
+  height: 100%;
+  padding-left: 5px;
+  border-radius: 8px;
+  background-color: white;
+  position: relative;
+  cursor: pointer;
+}
+
+.show-data .quiz nav {
+  height: 50%;
+  overflow: hidden;
+  position: relative;
+}
+.show-data .quiz nav img {
+  width: 95%;
+}
+.show-data .quiz nav p {
+  left: 10px;
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  padding: 5px;
+  background-color: #e9e9eb;
+  border-radius: 4px;
+}
+
+.show-data .quiz h1 {
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  text-align: center;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+.show-data .quiz h2 {
+  font-weight: 500;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+.show-data .quiz h2:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.show-data .quiz a {
+  display: block;
+  font-weight: 100;
+  font-family: "Montserrat", sans-serif;
+  margin-left: 10px;
+  margin-top: 20px;
+  width: 95%;
+  font-size: 12px;
+  border-radius: 12px;
+  padding: 2px 10px;
+  font-size: 20px;
+  cursor: default;
+}
+.show-data .quiz a span {
+  font-size: 12px;
+  color: #555;
+  font-weight: 600;
+  text-align: left;
+  letter-spacing: 0.5px;
+  margin-left: 20px;
+}
+.show-data .quiz p {
+  font-weight: 300;
+  font-family: "Montserrat", sans-serif;
+  margin-left: 10px;
+  margin-top: 20px;
+  width: 90%;
+  border-radius: 12px;
+  padding: 2px 10px;
+  cursor: default;
+  font-size: 14px;
+}
+.show-data .quiz p span {
+  font-size: 14px;
+  color: #f0a929;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-left: 20px;
+}
+
+.show-data .quiz button {
+  position: absolute;
+  bottom: 10px;
+  font-weight: bolder;
+  font-family: "Montserrat", sans-serif;
+  margin-left: 10px;
+  margin-top: 20px;
+  width: 95%;
+  background-color: #00c985;
+  border-radius: 4px;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  color: white;
+  padding-left: 30%;
+  transition: box-shadow 1s;
+  align-items: center;
+}
+.show-data .quiz button svg {
+  width: 30px;
+  margin-left: 30px;
+  stroke-width: 2px;
+}
+.show-data .quiz button:hover {
+  box-shadow: 0 0 8px #00744d;
+}
+
+.show-data .quiz h6 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: bolder;
+  color: white;
+  padding-top: 5px;
+  padding-left: 11px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #8458b6;
+  transition: transform 1s, background-color 1s, color 1s;
+}
+
+.show-data .quiz h6:hover {
+  transform: rotate(180deg);
+  background-color: #5d2057;
+  color: cyan;
+}
+
+.feature {
+  position: absolute;
+  top: 0;
+  display: none;
+}
+.feature div {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.feature img {
+  position: absolute;
+  top: 0;
+  border-radius: 4px;
+  margin-left: 50%;
+  transform: translate(-50%);
+  margin-top: 100px;
+}

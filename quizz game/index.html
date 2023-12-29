@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quizz | Free Quiz platform</title>
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Pacifico&family=Rubik+Doodle+Shadow&family=Ubuntu:wght@400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Quizz</h1>
+      <nav>
+        <ul>
+          <li>For School</li>
+          <li>Plans</li>
+          <li>Solutions</li>
+          <li>Resources</li>
+        </ul>
+        <div>
+          <button style="border: 2px solid #ede6f6" class="code">
+            Enter code
+          </button>
+          <button style="color: #5d2057" class="login" onclick="log_in()">Log In</button>
+          <button style="color: #5d2057">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              style="width: 30px; height: 30px; background-color: white"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+          <button style="color: white; font-weight: bold" class="signup" onclick="sign_up()">
+            Sign Up
+          </button>
+        </div>
+      </nav>
+    </header>
+    <div class="tab-dub">
+      <div class="tab-tab .active">
+        <p>Create & Customize</p>
+        <img src="file.svg" alt="" />
+      </div>
+      <div class="tab-tab">
+        <p>Inculde & Engage</p>
+        <img src="users.svg" alt="" />
+      </div>
+      <div class="tab-tab">
+        <p>Get Data</p>
+        <img src="data.svg" alt="" />
+      </div>
+    </div>
+    <div class="container">
+      <div class="home">
+        <h1>It matters <span id="heading">how you ask</span></h1>
+        <p>
+          Assessment, instruction, and practice that <br />motivate every
+          student
+        </p>
+        <div class="first">
+          <button onclick="sign_up()">
+            <span>TEACHERS</span>
+            <p>Sign up for Free ></p>
+          </button>
+          <button onclick="sign_up()">
+            <span>STUDENT</span>
+            <p>Sign up for Free ></p>
+          </button>
+        </div>
+        <div class="bt">
+          <img src="star.svg" alt="" />
+          <p style="margin-left: 15px">
+            Easy to use <span style="cursor: pointer">Explore now</span>
+          </p>
+        </div>
+        <div>
+          <img src="tick.svg" alt="" />
+          <p style="margin-left: 15px">
+            Used by many educators and students
+            <span>around the world</span>
+          </p>
+        </div>
+      </div>
+      <div class="page-0">
+        <h1>Trusted by teachers in <br /><span>0% of Indian Schools</span></h1>
+        <img src="page0.png" alt="" />
+      </div>
+      <div class="tab" id="tab">
+        <div onclick="click_tabs(0)">
+          <p>Create & Customize</p>
+          <img src="file.svg" alt="" />
+        </div onclick="container.scrollTo(
+          0,
+          element_tab[1].offsetTop - element_tab[1].clientHeight / 2.5
+        );">
+        <div onclick="click_tabs(1)">
+          <p>Inculde & Engage</p>
+          <img src="users.svg" alt="" />
+        </div>
+        <div onclick="click_tabs(2)">
+          <p>Get Data</p>
+          <img src="data.svg" alt="" />
+        </div>
+      </div>
+      <div class="page-1">
+        <div class="tab-1">
+          <div class="left">
+            <h1>
+              <span
+                >Quickly find or <br />
+                create</span
+              >
+              anything in <br />
+              your curriculum
+            </h1>
+            <p>
+              Prepare high-quality, interactive content in as little as two
+              minutes.
+            </p>
+            <div>
+              <img src="lib.svg" alt="" />
+              <h3>Customizable content library</h3>
+            </div>
+            <a>
+              30M+ teacher-created activities spanning all grade levels and
+              subjects
+            </a>
+            <div>
+              <img src="edit.svg" alt="" />
+              <h3>Customizable content library</h3>
+            </div>
+            <a>
+              Build from scratch, copy entire activities, or mix and match to
+              meet students’ needs
+            </a>
+          </div>
+          <div class="right right-img">
+            <video src="page-1.mp4" autoplay muted loop ></video>
+          </div>
+        </div>
+        <div class="tab-1">
+          <div class="left">
+            <h1>
+              Get data that’s
+              <span style="color: #2d9da6">easy to act on</span>
+            </h1>
+            <p>
+              The exact insights you need to make data-driven instruction a
+              reality.
+            </p>
+            <div>
+              <img src="realtime.svg" alt="" />
+              <h3>Real-time insights</h3>
+            </div>
+            <a> Identify student’s needs and immediately adapt </a>
+            <div>
+              <img src="snapshot.svg" alt="" />
+              <h3>Snapshot reports</h3>
+            </div>
+            <a>
+              See overall class performance, the toughest question or topic, and
+              individual progress
+            </a>
+          </div>
+          <div class="right right-img">
+            <img src="tab3.webp" style="width: 725px; height: 524px"/>
+          </div>
+        </div>
+        <div class="tab-1">
+          <div class="left">
+            <h1>
+              Include and engage
+              <span style="color: #5d2057">every student</span>
+            </h1>
+            <p>Flexibly engage students at their own pace, from any device.</p>
+            <div>
+              <img src="inclusive.svg" alt="" />
+              <h3>Inclusive, accessible design</h3>
+            </div>
+            <a> Enable Read Aloud for elementary and ELL students </a>
+            <div>
+              <img src="gamification.svg" alt="" />
+              <h3>Gamification for good</h3>
+            </div>
+            <a> A leaderboard, themes, music, and more to motivate students </a>
+          </div>
+          <div class="right right-img">
+            <img src="tab2.webp" style="width: 725px; height: 524px"/>
+          </div>
+        </div>
+      </div>
+      <div class="dark">
+        <div class="left">
+
+          <p>The best way to ask questions, explore ideas, and let <br> students show what they know.</p>
+          <h1>Start motivating students. <span>In minutes.</span></h1>
+          <div class="first">
+            <button onclick="sign_up()">
+              <span>TEACHERS</span>
+              <p>Sign up for Free ></p>
+            </button>
+            <button onclick="sign_up()">
+              <span>STUDENT</span>
+              <p>Sign up for Free ></p>
+            </button>
+          </div>
+        </div>
+        <div class="right">
+          <img src="dark.webp" alt="">
+        </div>
+      </div>
+
+      <hr
+        style="
+          width: 95%;
+          margin: 0 auto;
+          margin-top: 20px;
+          border: 0;
+          border-top: 1px solid #bcbbbb;
+        "
+      />
+      <footer>
+        <h1>Quizz</h1>
+        <div>
+          <p>The Quizz Blog</p>
+          <p>Worksheets</p>
+          <p>Teacheer Resources</p>
+          <p>Reseller program</p>
+          <p>Quizz for Work</p>
+          <p>Privacy Policy</p>
+          <p>Help Center</p>
+          <p>Privacy Center</p>
+          <p>Accessibility and Inclusion</p>
+          <p>Careers</p>
+          <p>Sitemap</p>
+          <p>About Us</p>
+          <p>Terms of Service</p>
+        </div>
+        <nav>
+          <img src="get1.png" />
+          <img src="get2.png" />
+        </nav>
+        <hr
+          style="
+            grid-column-end: 4;
+            grid-column-start: 1;
+            margin-top: 20px;
+            border: 0;
+            border-top: 1px solid #bcbbbb;
+          "
+        />
+        <ol type="1">
+          <li>2023 survey of 1 teacher conducted by Quizz</li>
+          <li>Journal of Eductaion and e_learning Research</li>
+          <li>
+            International Online Journal of Education and Teaching (Source)
+          </li>
+        </ol>
+        <div>
+          <img src="social_insta.png" alt="" />
+          <img src="social_twitter.png" alt="" />
+          <img src="social_linked.png" alt="" />
+          <p>2023 Quizz Inc.</p>
+        </div>
+      </footer>
+    </div>
+    <script>
+      let thank = document.getElementsByClassName("thank")[0];
+      let check = localStorage.getItem("user");
+      if (check != null) {
+        // location.href = "home.html";
+        location.replace('home.html')
+      }
+
+
+    </script>
+    <script src="start.js"></script>
+  </body>
+</html>

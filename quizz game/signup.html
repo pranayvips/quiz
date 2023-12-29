@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quizz : Sign-up</title>
+    <link rel="stylesheet" href="signup.css" />
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Pacifico&family=Rubik+Doodle+Shadow&family=Ubuntu:wght@400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Quizz</h1>
+      <div>
+        <a
+          href="signup.html"
+          style="margin-right: 20px; color: white; text-decoration: none"
+        >
+          Need Help?
+        </a>
+        <a href="login.html"><button>Log in</button></a>
+      </div>
+    </header>
+    <div class="container">
+      <div class="left">
+        <h1>Welcome to Quizz</h1>
+        <h3>Create a free account in few steps</h3>
+        <form action="">
+          <label>User Name</label>
+          <input type="text" id="name" placeholder="Choose a user name" />
+          <label>Password</label>
+          <input
+            type="password"
+            id="pass"
+            style="letter-spacing: 1px"
+            placeholder="Choose a password"
+          />
+          <select name="" id="gender">
+            <option value="none">Select Gender</option>
+            <option value="Male : has a error in every code">
+              Male : has a error in every code
+            </option>
+            <option value="Female : has a error in every code">
+              Female : has a error in every code
+            </option>
+            <option value="Male but is overweight">
+              Male but is overweight
+            </option>
+            <option value="Female but is overweight">
+              Female but is overweight
+            </option>
+            <option value="Nah bro I am a amazon bag">
+              Nah bro I am a amazon bag
+            </option>
+            <option value="Conjoin Male">Conjoin Male</option>
+            <option value="Conjoin Female">Conjoin Female</option>
+            <option value="Male but identify as a computer">
+              Male but identify as a computer
+            </option>
+            <option value="Female but identify as a computer">
+              Female but identify as a computer
+            </option>
+            <option value="Born Male, Bad Circumstance, Raised Female">
+              Born Male, Bad Circumstance, Raised Female
+            </option>
+            <option value="Born Female, Bad Circumstance, Raised Male">
+              Born Female, Bad Circumstance, Raised Male
+            </option>
+            <option value="Attack Helicopter">Attack Helicopter</option>
+            <option value="Male but is a robot">Male but is a robot</option>
+            <option value="Female but is a robot">Female but is a robot</option>
+            <option value="HouseHold pet - Male">HouseHold pet - Male</option>
+            <option value="HouseHold pet - Female">
+              HouseHold pet - Female
+            </option>
+            <option value="Prefer not to say">Prefer not to say</option>
+          </select>
+          <a id="signup">Sign Up</a>
+        </form>
+        <p
+          style="
+            text-align: center;
+            color: #a0a0a0;
+            font-size: 12px;
+            letter-spacing: 0.2px;
+          "
+        >
+          By signing up, you agree to our
+          <span style="cursor: pointer; text-decoration: underline"
+            >Terms of Service</span
+          >
+          &
+          <span style="cursor: pointer; text-decoration: underline"
+            >Privacy Policy</span
+          >
+        </p>
+        <div>
+          <a>Already have an account?</a>
+          <a href="login.html"><button>Log in</button></a>
+        </div>
+      </div>
+      <div class="right">
+        <img src="signup.png" alt="" />
+        <div><p>We would love to see you join our community</p></div>
+      </div>
+    </div>
+    <div class="success">
+      <img src="success.gif" alt="" />
+    </div>
+    <div class="thank">
+      <img src="thank.gif" alt="" />
+    </div>
+    <script>
+      let signup = document.getElementById("signup");
+      let thank = document.getElementsByClassName("thank")[0];
+      let success = document.getElementsByClassName("success")[0];
+      signup.addEventListener("click", () => {
+        let name = document.getElementById("name").value;
+        let pass = document.getElementById("pass").value;
+        let gender = document.getElementById("gender").value;
+        if (name.length > 1 && pass.length > 1 && gender != "none") {
+          localStorage.setItem("user", name + ";;" + pass + ";;" + gender);
+          success.style.display = "block";
+          setTimeout(() => {
+            // location.href = "home.html";
+            location.replace("home.html");
+          }, 4000);
+        } else {
+          alert("Please fill the form Properly");
+        }
+      });
+      let check = localStorage.getItem("user");
+      if (check != null) {
+        thank.style.display = "block";
+        setTimeout(() => {
+          // location.href = "home.html";
+          location.replace("home.html");
+        }, 2500);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quizz : Log-in</title>
+    <link rel="stylesheet" href="login.css" />
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Pacifico&family=Rubik+Doodle+Shadow&family=Ubuntu:wght@400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Quizz</h1>
+      <div>
+        <a
+          href="signup.html"
+          style="margin-right: 20px; color: white; text-decoration: none"
+        >
+          Need Help?
+        </a>
+        <a href="signup.html">
+          <button>Sign Up</button>
+        </a>
+      </div>
+    </header>
+    <div class="container">
+      <div class="left">
+        <h1>Welcome back to Quizz</h1>
+        <h3>Login with credentials</h3>
+        <form action="">
+          <label>User Name</label>
+          <input
+            type="text"
+            style="letter-spacing: 1px"
+            placeholder="Your user name"
+            id="name"
+          />
+          <label>Password</label>
+          <input
+            type="password"
+            style="letter-spacing: 1px"
+            placeholder="Your password"
+            id="pass"
+          />
+
+          <!-- <input type="submit" id="signup" value="Log in" /> -->
+          <a id="signin">Sign In</a>
+        </form>
+        <p
+          style="
+            text-align: center;
+            color: #a0a0a0;
+            font-size: 12px;
+            letter-spacing: 0.2px;
+          "
+        >
+          By logging in, you agree to our
+          <span style="cursor: pointer; text-decoration: underline"
+            >Terms of Service</span
+          >
+          &
+          <span style="cursor: pointer; text-decoration: underline"
+            >Privacy Policy</span
+          >
+        </p>
+        <div>
+          <a>Don't have an account?</a>
+          <a href="signup.html"><button>Sign Up</button></a>
+        </div>
+      </div>
+      <div class="right">
+        <img src="signup.png" alt="" />
+        <div><p>Welcome back to our community</p></div>
+      </div>
+    </div>
+    <div class="success">
+      <img src="success.gif" alt="" />
+    </div>
+    <div class="thank">
+      <img src="thank.gif" alt="" />
+    </div>
+    <script>
+      let signin = document.getElementById("signin");
+      let thank = document.getElementsByClassName("thank")[0];
+      let success = document.getElementsByClassName("success")[0];
+      signin.addEventListener("click", () => {
+        let name = document.getElementById("name").value;
+        let pass = document.getElementById("pass").value;
+        if (name.length > 1 && pass.length > 1) {
+          localStorage.setItem("user", name + ";;" + pass);
+          success.style.display = "block";
+          setTimeout(() => {
+            // location.href = "home.html";
+            location.replace('home.html')
+          }, 4000);
+        } else {
+          alert("Please fill the form properly");
+        }
+      });
+      let check = localStorage.getItem("user");
+      if (check != null) {
+        thank.style.display = "block";
+        setTimeout(() => {
+          // location.href = "home.html";
+          location.replace('home.html')
+        }, 2500);
+      }
+    </script>
+  </body>
+</html>
